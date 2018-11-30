@@ -1,0 +1,29 @@
+
+//SO UL list section
+var roomList = "<ul>";
+for (var i = 0; i < hotel.roomNumbersAvailable.length; i++) {
+    roomList += "<li>" + hotel.roomNumbersAvailable[i]+"</li>";
+
+}
+
+roomList += "</ul>";
+
+document.getElementById("rmsAvail").innerHTML = roomList;
+//EO UL list section
+
+// SO select a room method
+
+//var rooms = hotel.roomNumbersAvailable[i];
+
+var selectRoomList = "<form> <select id='selectedRoom'>";
+for ( var i = 0; i < hotel.roomNumbersAvailable.length; i++) {
+    // NEED TO ESCAPE CERTAIN QUOTES ON THE FOLLOWING LINE. SHOULD RESEARCH "ESCAPING CHARACTERS AND QUOTES"
+    selectRoomList += "<option value=\'"+hotel.roomNumbersAvailable[i]+"\'>"+hotel.roomNumbersAvailable[i]+"</option>";
+}
+selectRoomList += "</select> </form>";
+
+document.getElementById("selectARoom").innerHTML = selectRoomList;
+
+// EO select a room method
+
+//EOF
